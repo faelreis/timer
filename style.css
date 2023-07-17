@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    color: #F7FCFF;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+.btn {
+    cursor: pointer;
+    background-color: #020E2760;
+    height: 4.5rem;
+    width: 100%;
+    border-radius: 3px;
+    transition: all .3s ease-out;
+    font-weight: 500;
+}
+
+.btn.double{
+    background-color: #050e2598;
+}
+
+.btn.operator{
+    background-color: #131f3d7a;
+}
+
+.btn:hover{
+    background-color: rgba(2, 14, 39, 0.6);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(50px);
+    border-radius: 4px;
+    transform: scale(1.3);
+}
+
+
+body {
+    background-image: url(./background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.result{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-weight: 200;
+    color: #f7fcff;
+    width: 100%;
+    text-align: right;
+    outline: none;
+}
+
+
+.grid-container{
+    border-radius: 1.0rem;
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+    background: rgba(2, 14, 39, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin-bottom: 30px;
+}
+
+
+@media only screen and (max-width: 360px){
+    .grid-container{
+        max-width: 250px;
+    }
+    span{
+        font-size: 13px;
+    }
+    a{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 270px){
+    .grid-container{
+        max-width: 200px;
+    }
+}
+
+.grid-container .output{
+    border-bottom: 1px solid #ffffff30;
+    margin-bottom: 15px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container .output .previous-operand{
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+.grid-container .output .previous-operand .equals{
+    display: none;
+}
+
+.grid-container .output .previous-operand .equals.active{
+    display: block;
+}
+
+.grid-container .output .current-operand{
+    margin-bottom: 20px;
+}
+
+
+.grid-container .output .current-operand span{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.grid-container .operatores{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 7px;
+}
+
+.grid-container .operatores .operator{
+    background: rgba(2, 14, 39, 0.6);
+}
+
+.grid-container .operatores .btn.double{
+    grid-column: span 2;
+}
+
+
+span{
+    color: #020e2759;
+}
+
+a{
+    color: #020e2759;
+    font-weight: 700;
+}
+
